@@ -1,0 +1,45 @@
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+  }
+  .card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+  }
+  .card-front {
+    transform: rotateY(0deg);
+    background-color: #eaeaea;
+   
+    text-align: center;
+  }
+  .card-back {
+    transform: rotateY(180deg);
+    background-color: #4158D0;
+    background-image: url(istockphoto-173870449-1024x1024.jpg);
+    
+    color: #fff;
+    text-align: center;
+  }
+  .card:hover .card-front {
+    transform: rotateY(-180deg);
+  }
+  .card:hover .card-back {
+    transform: rotateY(0deg);
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    fill: #333;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.9s cubic-bezier
+    (0.175, 0.885, 0.32, 1.275);
+        }
+  
